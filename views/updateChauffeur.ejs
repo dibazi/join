@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Styles -->
+
+        <!-- Scripts -->
+    </head>
+
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+
+<div class="min-h-full">
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Open main menu</span>
+            <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <!-- Your Company Logo -->
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </button>
+            </div>
+            <!-- Dropdown menu, show/hide based on menu state -->
+            <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="user-menu">
+              <!-- Active: "bg-gray-100", Not Active: "" -->
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+      </div>
+    </div>
+  </nav>
+      
+  
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Update Driver Details</h1>
+      </div>
+    </header>
+    <main>
+
+        <div>
+            <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                  <form method="post" action="/edit/chauffeur/<%= chauffeur.id %>">
+                        <div class="shadow overflow-hidden sm:rounded-md">
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="name" class="block font-medium text-sm text-gray-700">Driver name</label>
+                                <input type="text" name="name" id="name" value="<%= chauffeur.name %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+    
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="surname" class="block font-medium text-sm text-gray-700">Driver surname</label>
+                                <input type="text" name="surname" id="surname" value="<%= chauffeur.surname %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+    
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="middle_name" class="block font-medium text-sm text-gray-700">Driver middle name</label>
+                                <input type="text" name="middle_name" id="middle_name" value="<%= chauffeur.middle_name %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+    
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="email" class="block font-medium text-sm text-gray-700">Driver email</label>
+                                <input type="email" id="email" name="email" value="<%= chauffeur.email %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="address" class="block font-medium text-sm text-gray-700">Driver address</label>
+                                <input type="text" name="address" id="address" value="<%= chauffeur.address %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                              <label for="address" class="block font-medium text-sm text-gray-700">Driver license n*</label>
+                              <input type="text" name="driver_license" id="driver_license" value="<%= chauffeur.driver_license %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                          </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="cellphone" class="block font-medium text-sm text-gray-700">Driver cellphone</label>
+                                <input type="tel" id="cellphone" name="cellphone" value="<%= chauffeur.cellphone %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="car_maker" class="block font-medium text-sm text-gray-700">Car maker</label>
+                                <input type="text" id="car_maker" name="car_maker" value="<%= chauffeur.car_maker %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="car_model" class="block font-medium text-sm text-gray-700">Car model</label>
+                                <input type="text" id="car_model" name="car_model" value="<%= chauffeur.car_model %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="car_color" class="block font-medium text-sm text-gray-700">Car color</label>
+                                <input type="text" id="car_color" name="car_color" value="<%= chauffeur.car_color %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="name" class="block font-medium text-sm text-gray-700">car registration</label>
+                                <input type="text" id="car_registration" name="car_registration" value="<%= chauffeur.car_registration %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+                            </div>
+
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <label for="picture" class="block font-medium text-sm text-gray-700">Driver picture</label>
+                                <input type="file" id="picture" name="picture" value="<%= chauffeur.picture %>" class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer w-full" autocomplete="off">
+\                            </div>
+    
+                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+  </div>
+
+      <!-- Tailwind CSS (place at the end of the body for faster loading) -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/postcss7-compat@2.2.19/dist/tailwind.min.js"></script>
+      <!-- Your custom JavaScript for mobile menu interaction -->
+      <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+  
+    </body>
+</html>

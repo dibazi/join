@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="css/test.css" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <style>
+        .error {
+            color: white;
+            background-color: red;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Login</div>
+    <div class="content">
+        <% if (messages.error) { %>
+            <div class="error"><%= messages.error %></div>
+        <% } %>
+      <form action="/login" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" id="user_name" name="user_name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="Password" name="password" id="password" placeholder="Enter your password" required>
+          </div>
+
+        </div>
+        <div class="button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="button">
+            <p>Not register? press</p><span><a href="/register">register</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

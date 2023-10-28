@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Participants</title>
+</head>
+<body>
+    <p>Number of records found: <%= participants.length %></p><br>
+    <h1>Project Participants</h1>
+
+    <% if (participants.length > 0) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Participant ID</th>
+                <th>Name</th>
+                
+                <!-- Add more participant attributes as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <% participants.forEach(function(participant) { %>
+            <tr>
+                <td><%= participant.id %></td>
+                <td><%= participant.user_id %></td>
+                
+                <!-- Add more participant attributes as needed -->
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <p>No participants found for this project.</p>
+    <% } %>
+
+    <a href="/">Back to Projects</a>
+    
+    
+</body>
+</html>

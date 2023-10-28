@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/participant.css" />
+
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <main>
+    <section class="contact">
+      <div class="container">
+        <div class="left">
+          <div class="form-wrapper">
+            <div class="contact-heading">
+              <h1>Create your project<span>.</span></h1>
+              <p class="text">Or reach us via : <a href="mailto:Publius@mail.com">Publius@mail.com</a></p>
+            </div>
+
+            <form action="/add_project" method="post" class="contact-form" enctype="multipart/form-data">
+
+              <div class="input-wrap w-100">
+                <label>Project name</label>
+              </div>
+
+              <input type="hidden" name="author" id="author" value="<%= user.id %>">
+
+              <input type="hidden" name="status" id="status" value="ongoing">
+
+              <div class="input-wrap w-100">
+                <input class="contact-input" placeholder="project name" autocomplete="off" name="name" id="name" type="text" required>
+                <i class="icon fa-solid fa-address-card"></i>
+              </div>
+
+              <div class="input-wrap w-100">
+                <label>Choose category</label>
+              </div>
+
+              <div class="input-wrap w-100">
+                <select class="contact-input" name="category" id="category">
+                  <option value="Accounting & Finance">select category</option>
+                  <option value="Accounting & Finance">Accounting & Finance</option>
+                  <option value="Advertising & Marketing">Advertising & Marketing</option>
+                  <option value="Aerospace & Defense">Aerospace & Defense</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Arts, Entertainment & Media">Arts, Entertainment & Media</option>
+                  <option value="Automotive">Automotive</option>
+                  <option value="Banking & Financial Services">Banking & Financial Services</option>
+                  <option value="Biotechnology & Pharmaceuticals">Biotechnology & Pharmaceuticals</option>
+                  <option value="Construction">Construction</option>
+                  <option value="Consumer Goods & Retail">Consumer Goods & Retail</option>
+                  <option value="Education">Education</option>
+                  <option value="Energy">Energy</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Environmental Services">Environmental Services</option>
+                  <option value="Government & Public Sector">Government & Public Sector</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Hospitality & Tourism">Hospitality & Tourism</option>
+                  <option value="Information Technology & Services">Information Technology & Services</option>
+                  <option value="Legal Services">Legal Services</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Non-Profit">Non-Profit</option>
+                  <option value="Real Estate">Real Estate</option>
+                  <option value="Telecommunications">Telecommunications</option>
+                  <option value="Transportation & Logistics">Transportation & Logistics</option>
+                </select>
+              </div>
+
+              <div class="input-wrap">
+                <label>Starting date</label>
+              </div>
+              <div class="input-wrap">
+                <input class="contact-input" placeholder="starting date" autocomplete="off" name="start_date" id="start_date" type="date" required>
+              </div>
+
+              <div class="input-wrap w-100">
+                <label>Description</label>
+              </div>
+
+              <div class="input-wrap textarea w-100">
+                <textarea name="description" id="description" auto-complete="off" class="contact-input" required></textarea>
+                <i class="icon fa-solid fa-inbox"></i>
+              </div>
+
+              <div class="contact-buttons">
+                <button class="btn upload">
+                  <span>
+                    <i class="fa-solid fa-paperclip"></i> Add attachement
+                  </span>
+                  <input type="file" name="files" id="files" multiple>
+                </button>
+                <input type="submit" value="create project" class="btn">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="image-wrapper">
+            <img src="assets/img/img.jpg" class="img">
+            <div class="wave-wrap">
+              <svg class="wave" viewBox="0 0 783 1536" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="wave"
+                  d="M236.705 1356.18C200.542 1483.72 64.5004 1528.54 1 1535V1H770.538C793.858 63.1213 797.23 196.197 624.165 231.531C407.833 275.698 274.374 331.715 450.884 568.709C627.393 805.704 510.079 815.399 347.561 939.282C185.043 1063.17 281.908 1196.74 236.705 1356.18Z" />
+              </svg>
+            </div>
+            <svg class="dashed-wave" viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="dashed-wave"
+                d="M0.5 876C25.6667 836.167 73.2 739.8 62 673C48 589.5 35.5 499.5 125.5 462C215.5 424.5 150 365 87 333.5C24 302 44 237.5 125.5 213.5C207 189.5 307 138.5 246 87C185 35.5 297 1 344.5 1" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+  <script src="../app.js"></script>
+</body>
+
+</html>
