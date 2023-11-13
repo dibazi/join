@@ -245,7 +245,7 @@ app.get('/project/:id', (req, res) => {
 
   // Query your database to count how many times the project ID appears in participants
   // For example, if you're using MySQL:
-  const sql = 'SELECT COUNT(*) AS projectCount FROM participants WHERE project_id = ?';
+  const sql = 'SELECT COUNT(*) AS projectCount FROM join_participants WHERE project_id = ?';
   pool.query(sql, [id], (err, result) => {
     if (err) {
       console.error('Error fetching data: ' + err.stack);
