@@ -32,9 +32,9 @@
                   <form action="/participants/create" method="post">
                         <div class="shadow overflow-hidden sm:rounded-md">
                             <div class="px-4 py-5 bg-white sm:p-6">
-                                <label for="garment_name" class="block font-medium text-sm text-gray-700">project: <%= projectId %>  user: <%= join_users.id %>  <a href="/project/<%= projectId %>/participants" class="text-blue-600 hover:text-blue-900 mb-2 mr-2">participants</a>: <%= projectCount %></label>
+                                <label for="garment_name" class="block font-medium text-sm text-gray-700">project: <%= projectId %>  user: <%= nndb_cloud_db123.join_users.id %>  <a href="/project/<%= projectId %>/participants" class="text-blue-600 hover:text-blue-900 mb-2 mr-2">participants</a>: <%= projectCount %></label>
                             </div>
-                            <input type="hidden" name="user_id" id="user_id" value="<%= join_users.id %>">
+                            <input type="hidden" name="user_id" id="user_id" value="<%= nndb_cloud_db123.join_users.id %>">
                             <input type="hidden" name="status" id="status" value="in">
                             <input type="hidden" name="project_id" id="project_id" value="<%= projectId %>">
                             
