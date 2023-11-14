@@ -288,7 +288,7 @@ app.get('/project/:id/participants', (req, res) => {
   const projectId = req.params.id;
 
   // Query your database to fetch all records with the given project ID from the participants table
-  const sql = 'SELECT * FROM participants WHERE project_id = ?';
+  const sql = 'SELECT * join_participants WHERE project_id = ?';
 
   pool.query(sql, [projectId], (err, results) => {
     if (err) {
